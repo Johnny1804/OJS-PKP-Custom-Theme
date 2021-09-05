@@ -1,0 +1,448 @@
+
+
+/*********** Schriften **************/
+
+@font-face {
+	font-family: "NotoSans";
+	src: url('../../../../../plugins/themes/custom/fonts/NotoSans-normal-normal.eot');
+	src: url('../../../../../plugins/themes/custom/fonts/NotoSans-normal-normal.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: "NotoSerif";
+	src: url('../../../../../plugins/themes/custom/fonts/NotoSerif-normal-normal.eot');
+	src: url('../../../../../plugins/themes/custom/fonts/NotoSerif-normal-normal.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "FiraSans";
+	src: url('../../../../../plugins/themes/custom/fonts/FiraSans-normal-normal.eot');
+	src: url('../../../../../plugins/themes/custom/fonts/FiraSans-normal-normal.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SourceSansPro";
+	src: url('../../../../../plugins/themes/custom/fonts/SourceSansPro-normal-normal.eot');
+	src: url('../../../../../plugins/themes/custom/fonts/SourceSansPro-normal-normal.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Merriweather";
+	src: url('../../../../../plugins/themes/custom/fonts/Merriweather-normal-normal.eot');
+	src: url('../../../../../plugins/themes/custom/fonts/Merriweather-normal-normal.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "MerriweatherSans";
+	src: url('../../../../../plugins/themes/custom/fonts/MerriweatherSans-normal.eot');
+	src: url('../../../../../plugins/themes/custom/fonts/MerriweatherSans-normal.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'LinuxLibertine'; /* normal */
+    src: url('../../../../../plugins/themes/custom/fonts/LinLibertine_R.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LinuxLibertine'; /* italic */
+    src: url('../../../../../plugins/themes/custom/fonts/LinLibertine_RI.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LinuxLibertine'; /* bold */
+    src: url('../../../../../plugins/themes/custom/fonts/LinLibertine_RB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LinuxLibertine'; /* bold */
+    src: url('../../../../../plugins/themes/custom/fonts/LinLibertine_RBI.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'LinuxBiolinum'; /* normal */
+    src: url('../../../../../plugins/themes/custom/fonts/LinBiolinum_R.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LinuxBiolinum'; /* italic */
+    src: url('../../../../../plugins/themes/custom/fonts/LinBiolinum_RI.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LinuxBiolinum'; /* bold */
+    src: url('../../../../../plugins/themes/custom/fonts/LinBiolinum_RB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-base:              @custom-font-base;
+@font-sml:               @font-base - 1;
+@font-bump:              @font-base + 2;
+@font-lead:              @font-base + 4;
+@font-header:            @font-base + 10;
+
+
+/*********** Farben allgemein **************/
+
+h1 {
+	color: @custom-colour-headlines;
+}
+
+.cmp_breadcrumbs h1 {
+	color: @text-light;
+}
+
+h2 {
+ color: @custom-colour-headlines;
+}
+
+h3 {
+	color: @custom-colour-headlines;
+}
+
+/*********** journal description **************/
+
+.journal_description {
+
+		padding-left: -@double;
+		padding-right: -@double;
+		padding: @double 0 @double 0;
+		
+		@media (min-width: @screen-phone) {
+			margin-left: -@double;
+			margin-right: -@double;
+			padding: @double;		
+			//background-color:#fee;
+		}
+
+		@media (min-width: @screen-tablet) {
+			margin-left: -@double;
+			margin-right: -@double;
+			padding: @triple;
+			//background-color:#efe;
+		}
+
+		@media (min-width: @screen-desktop) {
+			margin-left: -@triple;
+			margin-right: -@triple;
+			padding: @triple;
+			//background-color:#eef;			
+			& when (@custom-hero-header=1) {
+				& when (@custom-enabled-announcements=0 ) {
+					padding-top:0;
+				}
+			}
+			& when (@custom-hero-header=1) {
+				& when not (@custom-position-journaldescription=1) {
+					padding-top:0;
+				}
+			}
+			& when (@homepage-image=0) {
+				& when (@custom-position-journaldescription=0) {
+					padding-top:0;
+				}
+			}	
+		}
+
+		& when not (@custom-position-journaldescription=2 ) {
+			& when (@custom-enabled-announcements=0 ) {
+				border-bottom: @bg-border;
+			}
+		}
+		& when (@custom-position-journaldescription=1 ) {
+			& when (@custom-enabled-announcements=1 ) {
+				border-bottom: @bg-border;
+			}
+		}
+
+		> p:first-child {
+			margin-top: 0;
+		}
+
+		> p:last-child {
+			margin-bottom: 0;
+		}
+}
+
+.journal_description_above {
+	display: none;
+}
+.journal_description_below {
+	display: none;
+}
+
+.journal_description_above when (@custom-position-journaldescription =0) {
+	display: block;
+}
+.journal_description_below when (@custom-position-journaldescription =1) {
+	display: block;
+}	
+	
+/*********** left sidebar **************/
+
+& when (@custom-position-sidebar =1) {
+@media(min-width: 992px) {
+  .pkp_structure_sidebar {
+    float: left;
+  }
+  .pkp_structure_main {
+    float: right;
+  }
+
+  .pkp_structure_main:before {
+    left: 300px; /*300px*/
+  }
+  
+  .pkp_structure_main:after {
+    left: 952px; /*952px*/
+  }
+  
+}
+@media(min-width: 1200px) {
+  .pkp_structure_main:after {
+    left: 1160px;
+  }
+}
+}
+
+/*********** footer **************/
+
+.pkp_brand_footer img {
+	width: 100px;
+}
+
+.pkp_structure_footer_wrapper {
+	background-color: @custom-colour-footer;
+}
+
+// footer text white for dark background
+.pkp_footer_content {
+	color: @custom-colour-text-footer;
+}
+
+/*********** custom header **************/
+
+#custom_heading h1 a {
+	color: @text-bg-base;
+	text-decoration:none;
+	line-height:30px;
+	font-size: @font-header+2;
+	font-family: @custom-font-headlines;
+}
+
+// custom title oder logo auf smartphones ausschalten
+
+// keep custom heading
+& when (@custom-header-mobile=1) {
+	.pkp_site_name a.is_img {
+		display:none;
+	}
+}
+// keep logo
+& when (@custom-header-mobile=0) {
+	#custom_heading {
+		display:none;
+	}
+}
+@media only screen and (min-width: @screen-phone) {
+	#custom_heading {
+		display:block;		
+	}	
+	.pkp_site_name a.is_img {
+		display:block;
+	}
+	#custom_heading h1 a {
+		color: @custom-colour-heading;		
+	}		
+}
+
+& when (@custom-hero-header=0) {
+	#custom_heading h1 {
+		margin-top:0;
+	}
+}
+
+/*********** Sonstiges **************/
+
+// bug fix: die Buttons haben keinen Abstand
+.galleys_links li {
+	padding-bottom: 5px;
+}
+
+// bug fix: issue galleys haben bullet points
+.galleys_links {
+	list-style-type: none;
+	padding-left: 0px;
+}	
+
+// Abstände der Artikel zwischen Sections kleiner, mobile: da würde es sich übereinander schieben
+
+@media only screen and (min-width: 768px) {
+	.section {
+		 margin-top:-80px !important;	 
+	}
+}
+.custom_issue_title {
+	margin-top:0px !important;
+	margin-bottom: 10px !important;
+}
+
+
+// bug fix?
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
+	.pkp_structure_main {
+		padding-top:0;
+	}
+}
+
+& when (@custom-type-border=2) {
+	.pkp_structure_main::after {
+		background: transparent;
+	}
+	.pkp_structure_main::before {
+		background: transparent;
+	}
+}
+
+& when (@custom-type-border=1) {
+	#headerNavigationContainer {
+		border-bottom: 1px solid @bg-shade !important;
+	}
+}
+
+
+/*********** Annoucements **************/
+
+& when not (@custom-position-journaldescription=0 ) {
+	& when (@custom-enabled-announcements=1 ) {	
+			.cmp_announcements {
+				border-top: transparent !important;				
+			}
+		}
+	}
+
+@media (min-width: @screen-desktop) {
+	& when not (@custom-position-journaldescription=0 ) {
+		& when (@custom-enabled-announcements=1 ) {				
+			& when (@homepage-image=0) {
+				.cmp_announcements {
+					margin-top:-30px !important;
+				}
+			}
+		}
+	}
+}
+
+/*********** Hero Bild und Claim **************/
+
+.custom_hero_wrapper {
+	display:none;
+}
+
+& when (@custom-hero-header=1) {
+	.homepage_image {
+		//margin-top:0 !important;
+	}
+}
+
+@media only screen and (min-width: 480px)   {
+
+& when (@custom-hero-header=1) {
+
+		.custom_heading_wrapper {
+			display:none;
+		}
+		
+		.custom_hero_wrapper {
+			display:block;
+		}		
+	
+		#custom_hero a {
+			color: @custom-colour-heading;
+		}
+
+		#custom_hero {
+			font-family: @custom-font-headlines;
+		}
+
+		#custom_hero a:hover {
+			color: @custom-colour-heading;
+		}	
+	
+		.pkp_structure_main{
+			padding-top:0;
+		}	
+	
+		.pkp_head_wrapper {
+			padding-top:10px !important;
+		}
+	
+	.custom_hero_wrapper {
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;	
+		height: @custom-hero-height;	
+		position:relative;
+	}
+	
+	#custom_hero {
+		position: absolute;
+		top:  31%;
+		left: 32%;
+		transform: translate(-24%, -22%);
+	}
+	
+	#custom_hero a {
+		font-size: @font-header + 12;
+		line-height: @quintuple;
+		text-decoration:none;
+	}
+}
+}
+		
+// kleine Bildschirme: Schriftgröße verkleinern, andere Mitte
+		
+@media only screen and (max-width: 991px)   {
+& when (@custom-hero-header=1) {	
+	#custom_hero {
+		position: absolute;
+		top:  27%;
+		left: 32%;
+		transform: translate(-24%, -22%);
+	}
+	#custom_hero a {
+		font-size: @font-header + 8;
+		line-height: @quintuple;
+	}
+}
+}		
+
+
+
