@@ -6,6 +6,6 @@ Being inspired by an older version of the OJS platform, on the left I tried to a
 
 Moreover, some changes have been made to the header so that the logo can be displayed together with the title at the same time.
 
-Through these changes, changes were made regarding the appearance of the diary for both the desktop and the phone version.
+Through these changes, changes were made regarding the appearance of the journal for both the desktop and the phone version.
 
 ![132148427-abe3edca-4017-4217-ad55-f77047eb9ef8](https://user-images.githubusercontent.com/78510133/132148704-c1b2da0f-77af-4df6-a6af-6b8643ba9321.png)
