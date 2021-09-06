@@ -1,5 +1,5 @@
 # OJS-PKP-Custom-Theme
-Created a custom theme for the OJS Platform
+Created a custom theme for the OJS Platform version 3.3.0.6
 
 Starting with the default theme. I tried to bring something now but also old. 
 Being inspired by an older version of the OJS platform, on the left I tried to add a new sidebar that would be parallel to the rest of the existing elements.
